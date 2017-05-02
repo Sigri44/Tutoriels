@@ -17,7 +17,7 @@ Vous pouvez aussi y accéder via l'URL fournie dans le terminal.
 
 **Attention TRÈS IMPORTANT** : Vous aurez aussi une série de codes d'urgences générez que vous devez absolument conserver dans un coin. Cela vous permettra de vous connecter quand même à votre serveur même si votre téléphone vous a lâché ou que vous l'avez formaté.
 
-Appuyez ensuite sur la touche "y" pour mettre à jour la config Google Authenticator.
+Appuyez ensuite sur la touche `y` pour mettre à jour la config Google Authenticator.
 
 L'outil vous posera ensuite 3 questions relatives à la configuration :  
 - 1re : Désactiver l'utilisation multiple du même code. Niveau sécurité, je vous conseille de faire `y` pour désactiver cette possibilité. Cela vous protégera en cas d'attaques MITM.
