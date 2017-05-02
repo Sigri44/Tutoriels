@@ -31,5 +31,5 @@ ainsi que celle-ci
 ```
 
 Mettre un lien dans une page : 
-Voiçi le lien de ce [README] (https://github.com/Sigri44/Tutoriels/blob/master/tuto-aide-synthaxe-github.md).
+Voiçi le lien de ce [README](https://github.com/Sigri44/Tutoriels/blob/master/tuto-aide-synthaxe-github.md).
 
