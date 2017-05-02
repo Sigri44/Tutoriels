@@ -9,7 +9,7 @@ puis :
 Première question, voulez-vous des codes basés sur le temps ? Répondez-oui, cela permet de générer des codes qui sont limités dans le temps. (c'est un peu le but !)
 `y`
 
-Ensuite, Google Authenticator vous générera un gros QR Code qu'il faudra flasher avec l'application Authenticator (Pour [iOS ici] (https://itunes.apple.com/fr/app/google-authenticator/id388497605?mt=8) et pour [Android ici] (https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=fr)).
+Ensuite, Google Authenticator vous générera un gros QR Code qu'il faudra flasher avec l'application Authenticator (Pour [iOS ici](https://itunes.apple.com/fr/app/google-authenticator/id388497605?mt=8) et pour [Android ici](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=fr)).
 Vous pouvez aussi y accéder via l'URL fournie dans le terminal.
 
 **Attention TRÈS IMPORTANT** : Vous aurez aussi une série de codes d'urgences générez que vous devez absolument conserver dans un coin. Cela vous permettra de vous connecter quand même à votre serveur même si votre téléphone vous a lâché ou que vous l'avez formaté.
