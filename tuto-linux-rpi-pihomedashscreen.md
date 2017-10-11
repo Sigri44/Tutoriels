@@ -168,4 +168,17 @@ NB : attention aux virgules dans votre fichier “.json” : il y a une virgule 
 
 `sudo reboot`
 
+### Module Ping
+
+Côté client (Routeur, Synology, SRV etc...), copier le fichier `nc_ifstat_clt.sh` dans le dossier `/opt/etc/init.d/` (ou simplement `/etc/init.d` suivant les systèmes). N'oubliez pas de modifier les IP pour qu'elles correspondent à votre réseau.
+
+Puis créer une tâche planifiée de démarrage (via planificateur pour ma part), et y exécuter cette commande :
+
+`/opt/etc/init.d/nc_ifstat_clt.sh start`
+
+Côté Serveur (RPi), pas grand chose à faire, sinon qu'installer le fichier `nc_ifstat_srv.sh` dans `/var/www/ifstat/`
+
+Normalement les lumières devraient s'allumer au vert sur votre DashScreen !
+
 ### Module Météo
+
