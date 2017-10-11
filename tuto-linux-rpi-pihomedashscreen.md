@@ -63,40 +63,23 @@ par
 
 ```
 <VirtualHost *:80>
-        DocumentRoot /var/www
+        DocumentRoot /var/www/
 </VirtualHost>
 ```
 
 ## Associer l’ouverture de cette page web au lancement du serveur X
 
-`sudo nano /home/pi/.xinitrx`
+Dans `sudo raspi-config`, choisir l'option `3 - Boot Options`, puis `B1 Desktop / CLI` puis `B4 Desktop Autologin`
 
-Et y saisir :
+Cela va permettre au RPi de booter directement sur l'interface graphique.
 
-```
-#!/bin/sh
+Ensuite, on va simplement dire à openbox de lancer directement un chromium au démarrage de startx :
 
-#Cache le curseur de la souris au bout de 1 seconde
-unclutter -idle 1 &
+Dans le fichier `/home/pi/.config/openbox/autostart`, y ajouter :
 
-#Demarre le gestionnaire de fenetres
-openbox-session &
-
-#Demarre Chromium
-chromium –kiosk –incognito « http://localhost/ »
-```
+`chromium –kiosk –incognito http://localhost/`
 
 On peut tester si ça marche en tapant `startx` à l’invite de commande : une fenêtre noire doit apparaître, avec le curseur de souris au milieu, puis le navigateur internet s’ouvre en plein écran et notre page noire de toute à l’heure s’affiche.
-
-### Paramétrer le lancement automatique de l’afficheur eu démarrage du RPi
-Rien de compliqué, il suffit d’ajouter une ligne au fichier `sudo nano /etc/rc.local`, avant la ligne finale `exit 0` qui doit obligatoirement clore ce dernier :
-`su – pi -c ‘startx’ &`
-
-NB1 : su – pi = permet de démarrer un nouveau shell de connexion en tant que pi (il y a bien un espace avant “pi”)
-NB2 : -c ‘startx’ = permet de lancer la commande de démarrage de X
-NB3 : & = permet de lancer tout ça sans s’arrêter et bloquer la suite des événements.
-
-Et voilà, au démarrage du RPi, on doit tomber automatiquement sur notre page noir, ne reste plus qu’à y ajouter des modules, la partie la plus sympa du projet !
 
 ## Ajout de modules
 
