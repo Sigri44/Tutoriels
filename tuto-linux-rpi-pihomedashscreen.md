@@ -1,4 +1,4 @@
-# RPi - HomeScreen
+# RPi - PiHomeDashScreen
 
 Cette partie va traiter sur la création d'un système d'homescreen sur un RaspberryPi afin de le transformer en monitoring, pour suivre la conso de son RPi, ou encore l'activité de sa BP, ou même le nombre d'utilisateurs connectés à son VPN maison.
 Pour cela rien de plus simple, il vous faut :
