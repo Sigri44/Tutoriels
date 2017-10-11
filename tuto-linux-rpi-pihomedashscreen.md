@@ -13,7 +13,7 @@ Je passe l'étape de l'installation de RaspBian, qui est déjà le sujet d'un au
 
 Afin d'éviter d'user la carte SD en cycle d'écriture, nous allons déplacer les temp et réduire leur taille, vers la RAM via l'outil tmpfs :
 
-- `sudo nano /etc/fstab`
+`sudo nano /etc/fstab`
 
 et y ajouter 
 
@@ -31,9 +31,9 @@ et pour les logs :
 
 En premier lieu, il va falloir installer toutes les mise à jour, et enfin l'attirail complet du homescreen :
 
-- `sudo aptitude update -y && sudo aptitude upgrade -y && sudo rpi-update`
+`sudo aptitude update -y && sudo aptitude upgrade -y && sudo rpi-update`
 
-- `sudo aptitude install apache2 php5 php5-cli xinit openbox chromium-browser imagemagick php5-imagick php5-gd xplanet unclutter mingetty x11-xserver-utils lightdm`
+`sudo aptitude install apache2 php5 php5-cli xinit openbox chromium-browser imagemagick php5-imagick php5-gd xplanet unclutter mingetty x11-xserver-utils lightdm`
 
 - apache2 : pour le serveur Web
 - php5 : pour exécuter le PHP
