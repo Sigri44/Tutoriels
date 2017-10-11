@@ -4,6 +4,10 @@
 
 A l'image d'aptitude, nous pouvons installer un gestionnaire compatible Synology 5 et 6 :
 
+Passer en root :
+
+`sudo -i`
+
 Premier lieu, connaitre son proc' :
 `uname -a`
 
@@ -32,7 +36,7 @@ Et enfin ajouter cette ligne à la fin du fichier `/etc/profile`:
 
 `. /opt/etc/profile`
 
-`sudo reboot`
+`reboot`
 
 `sudo opkg update`
 
