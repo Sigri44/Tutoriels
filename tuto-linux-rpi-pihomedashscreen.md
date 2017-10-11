@@ -45,6 +45,17 @@ En premier lieu, il va falloir installer toutes les mise à jour, et enfin l'att
 - xplanet : pour générer les images de la terre et de la lune
 - x11-xserver-utils : pour gérer la mise en veille de l’écran
 
+### Désactiver la mise en veille
+
+Afin de ne pas être embêté par la mise en veille régulière de l'écran, nous allons réguler tout cela :
+
+`crontab -e`
+
+```
+0 0 * * *       su - jarvis -c "xset -display :0 dpms force off" # met le moniteur en veille à minuit
+0 8 * * *      su - jarvis -c "xset -display :0 dpms force on" #réveille le moniteur à 8h00 du matin
+```
+
 ### Faciliter les droits d'accès
 
 - `sudo chown -R www-data:www-data /var/www`
