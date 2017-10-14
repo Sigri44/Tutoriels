@@ -16,15 +16,16 @@ Afin d'éviter d'user la carte SD en cycle d'écriture, nous allons déplacer le
 `sudo nano /etc/fstab`
 
 et y ajouter 
-
-`tmpfs /tmp tmpfs defaults,noatime,nosuid,size=10m 0 0`
-`tmpfs /var/tmp tmpfs defaults,noatime,nosuid,size=10m 0 0`
-
+```
+tmpfs /tmp tmpfs defaults,noatime,nosuid,size=10m 0 0
+tmpfs /var/tmp tmpfs defaults,noatime,nosuid,size=10m 0 0
+```
 et pour les logs :
 
-`wget http://www.tremende.com/ramlog/download/ramlog_2.0.0_all.deb && sudo aptitude install lsof`
-`sudo dpkg -i ramlog_2.0.0_all.deb`
-`sudo reboot`
+`wget http://www.tremende.com/ramlog/download/ramlog_2.0.0_all.deb && sudo aptitude install lsof && sudo dpkg -i ramlog_2.0.0_all.deb && sudo reboot`
+
+puis au démarrage :
+
 `sudo /etc/init.d/ramlog status`
 
 ## Instalation des dépendances
