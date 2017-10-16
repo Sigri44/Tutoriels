@@ -7,6 +7,9 @@ Pour cela rien de plus simple, il vous faut :
 - support VESA c'est le top !
 - du temps pour suivre ce tuto
 
+Pour le boot automatique sous Wheezy : `1:2345:respawn:/sbin/login -f pi tty1/dev/tty1 2>&1` dans /etc/inittab
+
+
 Je passe l'étape de l'installation de RaspBian, qui est déjà le sujet d'un autre tuto, on attaque directement.
 
 ## Déplacer les fichiers temporaires
@@ -201,15 +204,26 @@ NB : attention aux virgules dans votre fichier “.json” : il y a une virgule 
 
 ### Module Ping
 
+Dans le fichier `inc.php`, inscrire dans la fonction `$hosts_ip = array`, les adresses IP ainsi que les ports que vous souhaitez tester.
+
+Normalement les lumières devraient s'allumer au vert sur votre DashScreen ! (ou rouge clignotant si hors-ligne)
+
+### Module Bande Passante
+
 Côté client (Routeur, Synology, SRV etc...), copier le fichier `nc_ifstat_clt.sh` dans le dossier `/opt/etc/init.d/` (ou simplement `/etc/init.d` suivant les systèmes). N'oubliez pas de modifier les IP pour qu'elles correspondent à votre réseau.
 
 Puis créer une tâche planifiée de démarrage (via planificateur pour ma part), et y exécuter cette commande :
 
 `/opt/etc/init.d/nc_ifstat_clt.sh start`
 
-Côté Serveur (RPi), pas grand chose à faire, sinon qu'installer le fichier `nc_ifstat_srv.sh` dans `/var/www/ifstat/`
+Côté Serveur (RPi), pour tester si la fonction de base fonctionne, faites un `ifstat -n -i eth0`, sinon installez le paquet.
 
-Normalement les lumières devraient s'allumer au vert sur votre DashScreen !
+Puis installer le fichier `nc_ifstat_srv.sh` dans `/etc/init.d/` et lancer la commande :
+
+`update-rc.d nc_ifstat_srv.sh defaults`
+`sudo reboot`
+
 
 ### Module Météo
 
+Pas grand chose à faire, ne serait-ce qu'aller sur le site [!Widget Météo]http://www.meteocity.com/widget/ afin de créer son propre widget, et ensuite copier-coller le code fourni dans le fichier `inc.php`
