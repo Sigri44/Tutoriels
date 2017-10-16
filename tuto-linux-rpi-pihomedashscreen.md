@@ -70,8 +70,8 @@ Afin de ne pas être embêté par la mise en veille régulière de l'écran, nou
 `crontab -e`
 
 ```
-0 0 * * *       su - jarvis -c "xset -display :0 dpms force off" # met le moniteur en veille à minuit
-0 8 * * *      su - jarvis -c "xset -display :0 dpms force on" #réveille le moniteur à 8h00 du matin
+0 0 * * *       su - pi -c "xset -display :0 dpms force off" # met le moniteur en veille à minuit
+0 8 * * *      su - pi -c "xset -display :0 dpms force on" #réveille le moniteur à 8h00 du matin
 ```
 
 ### Faciliter les droits d'accès
