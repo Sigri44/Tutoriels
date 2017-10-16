@@ -28,6 +28,23 @@ puis au démarrage :
 
 `sudo /etc/init.d/ramlog status`
 
+Si jamais au démarrage vous avez l'erreur `[FAIL] Starting ramlog-tmpfs 2.0 error /var/log is in use... failed !`, il suffit de faire :
+
+`sudo apt-get install rsync lsof -y && wget http://www.tremende.com/ramlog/download/ramlog_2.0.0_all.deb && sudo dpkg -i ramlog_2.0.0_all.deb`
+
+et ajouter dans le fichier `/etc/init.d/ramlog` :
+```
+# X-Start-Before: rsyslog
+# X-Stop-After: rsyslog
+```
+dans le cadre qui contient `###BEGIN INIT INFO`.
+
+puis la commande `sudo insserv && sudo reboot`
+
+et enfin au démarrage, de nouveau pour vérifier si le service est bien activé :
+
+`sudo /etc/init.d/ramlog status`
+
 ## Instalation des dépendances
 
 En premier lieu, il va falloir installer toutes les mise à jour, et enfin l'attirail complet du homescreen :
