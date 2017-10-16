@@ -88,7 +88,7 @@ On vérifie que c’est bon en saisissant l’adresse “http://%IPduRPi/” dan
 
 Ce n'est pas dur, nous allons faire au plus simple, remplacer le contenu de :
 
-`sudo nano /etc/apache2/sites-enabled/000-default.conf`
+`sudo nano /etc/apache2/sites-enabled/000-default (rajouter .conf à la fin selon les versions)`
 
 par
 
