@@ -24,6 +24,6 @@ Pour gagner environ 1 Go  de place, et si surtout vous ne comptez PAS utiliser l
 ### d) Suppression des fichiers inutiles
 ATTENTION : Si vous souhaitez utiliser les composants vidéo du Pi et notamment les outils raspivid ou raspistill, vous ne devez pas supprimer le répertoire /opt/vc. De manière générale, ne supprimer ce répertoire que si vous n’utilisez votre Pi en tant que serveur  (LAMP, NAS, FTP,…) sans utiliser de composants propres au Pi. Dans le doute, ne supprimez pas ce répertoire. Si vous l’avez supprimé par erreur, vous pouvez réinstaller son contenu en lançant la commande `rpi-update`.
 
-`rm -rf /opt/* /usr/share/icons/* /usr/games /usr/share/squeak /usr/share/sounds /usr/share/wallpapers /usr/share/themes /usr/share/kde4 /usr/share/images/* /home/pi/python_games`
+`sudo rm -rf /opt/* /usr/share/icons/* /usr/games /usr/share/squeak /usr/share/sounds /usr/share/wallpapers /usr/share/themes /usr/share/kde4 /usr/share/images/* /home/pi/python_games`
 
 Voilà avec cela, vous repassez sous la barre des 1/2 Go utilisés, et vous gardez un Raspbian parfaitement fonctionnelle.
