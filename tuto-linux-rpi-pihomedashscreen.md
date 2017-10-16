@@ -28,6 +28,8 @@ puis au démarrage :
 
 `sudo /etc/init.d/ramlog status`
 
+### En cas d'erreur au boot
+
 Si jamais au démarrage vous avez l'erreur `[FAIL] Starting ramlog-tmpfs 2.0 error /var/log is in use... failed !`, il suffit de faire :
 
 `sudo apt-get install rsync lsof -y && wget http://www.tremende.com/ramlog/download/ramlog_2.0.0_all.deb && sudo dpkg -i ramlog_2.0.0_all.deb`
