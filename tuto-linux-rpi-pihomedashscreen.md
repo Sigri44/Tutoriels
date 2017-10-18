@@ -152,22 +152,9 @@ Si on ouvre le fichier “index.php” du module “horloge” par exemple :
 
 ### Module xPlanet
 
-Unzippez le fichier dans `/var/www/ressources/`
+Unzippez le fichier dans `/var/www/`
 
-
-rendre le script associé exécutable :
-
-`sudo chmod 755 /var/www/tdb314/ressources/xplanet/xplanet_cloud.sh`
-
-ajouter un ligne associée au démon “cron” :
-
-`sudo crontab -e`
-
-```
-0 */4 * * * /var/www/tdb314/ressources/xplanet/xplanet_cloud.sh
-```
-Ceci pour une actualisation toutes les 4 heures.
-Et surtout, pour lancer xPlanet au démarrage, il faut :
+Pour lancer xPlanet au démarrage, il faut :
 
 copier le script “xplanet.sh” dans le répertoire "/etc/init.d/”
 `sudo cp /var/www/tdb314/ressources/xplanet/xplanet.sh /etc/init.d/xplanet.sh`
